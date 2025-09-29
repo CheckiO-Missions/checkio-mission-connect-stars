@@ -1,0 +1,76 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Dans cette mission, vous devrez réaliser le site <a target="_blank" href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree (Wikipedia)</a>.
+</p>
+<p>
+    On vous donne une liste de coordonnées de sommets. Chaque coordonnée est un tuple de x (entier) et y (entier).<br/>
+    Vous devez retourner une liste (ou un itérable) de lignes qui relient tous les sommets.
+    La longueur totale des lignes doit être minimale. Chaque ligne est un tuple de deux entiers. 
+    Ces entiers représentent l'index de la liste d'entrée.
+</p>
+
+<p><strong>REMARQUE:</strong></p>
+<ul>
+    <li>La sortie des tests a une combinaison unique de lignes.</li>
+</ul>
+
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+</pre>
+{% else %}
+<pre class="brush: python">
+connect_stars([(1, 1), (4, 4)]) == [(0, 1)]                         # or [(1, 0)]
+connect_stars([(1, 1), (4, 1), (4, 4)]) == [(0, 1), (1, 2)]         # or [(1, 2), (0, 1)] , [(1, 0), (2,1)] etc
+connect_stars([(6, 6), (6, 8), (8, 4), (3, 2)]) == [(0, 1), (0, 2), (0, 3)]   # or [(2, 0), (0, 3), (1, 0)] etc
+</pre>
+{% endif %}
+
+<p style="text-align: center;">
+    <img  title="connect stars examples" src="{{MEDIA}}example.png" alt="example" style="max-height: 250px"/>
+</p>
+</div>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Entrée: </strong>
+<ul>
+    <li>Une liste de coordonnées de sommets.
+        <ul>
+            <li>Chaque coordonnée est un tuple de x (entier) et y (entier).</li>
+        </ul>
+    </li>
+</ul>
+</p>
+
+<p>
+    <strong>Sortie: </strong>
+<ul>
+    <li>Une liste (ou un itérable) de lignes.</li>
+    <ul>
+        <li>Chaque ligne est un tuple de deux entiers. Ces entiers représentent l'index de la liste d'entrée.</li>
+        <li>L'ordre des lignes et de chaque index est arbitraire (voir les exemples).</li>
+    </ul>
+</ul>
+</p>
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>Condition préalable:</strong>
+    <ul>
+        <li>2 &le; len(input) &le; 50</li>
+        <li>0 &le; x (,y) &le; 999</li>
+    </ul>
+</p>
+
