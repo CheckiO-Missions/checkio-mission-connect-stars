@@ -1,0 +1,76 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    In dieser Mission müssen Sie die <a target="_blank" href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree (Wikipedia)</a> erstellen.
+</p>
+<p>
+    Sie erhalten eine Liste mit Koordinaten von Eckpunkten. Jede Koordinate ist ein Tupel aus x (Ganzzahl) und y (Ganzzahl).<br/>
+    Sie müssen eine Liste (oder eine Iterable) von Linien zurückgeben, die alle Eckpunkte verbinden.
+    Die Gesamtlänge der Linien sollte das Minimum sein. Jede Linie ist ein Tupel aus zwei ganzen Zahlen. 
+    Diese Ganzzahlen stellen den Index der Liste der Eingaben dar.
+</p>
+
+<p><strong>HINWEIS:</strong></p>
+<ul>
+    <li>Die Ausgabe von Tests hat eine eindeutige Kombination von Zeilen.</li>
+</ul>
+
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Beispiel:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+</pre>
+{% else %}
+<pre class="brush: python">
+connect_stars([(1, 1), (4, 4)]) == [(0, 1)]                         # or [(1, 0)]
+connect_stars([(1, 1), (4, 1), (4, 4)]) == [(0, 1), (1, 2)]         # or [(1, 2), (0, 1)] , [(1, 0), (2,1)] etc
+connect_stars([(6, 6), (6, 8), (8, 4), (3, 2)]) == [(0, 1), (0, 2), (0, 3)]   # or [(2, 0), (0, 3), (1, 0)] etc
+</pre>
+{% endif %}
+
+<p style="text-align: center;">
+    <img  title="connect stars examples" src="{{MEDIA}}example.png" alt="example" style="max-height: 250px"/>
+</p>
+</div>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Eingabe: </strong>
+<ul>
+    <li>Eine Liste von Koordinaten von Scheitelpunkten.
+        <ul>
+            <li>Jede Koordinate ist ein Tupel aus x (Ganzzahl) und y (Ganzzahl).</li>
+        </ul>
+    </li>
+</ul>
+</p>
+
+<p>
+    <strong>Ausgabe: </strong>
+<ul>
+    <li>Eine Liste (oder eine Iterable) von Zeilen.</li>
+    <ul>
+        <li>Jede Zeile ist ein Tupel aus zwei ganzen Zahlen. Diese ganzen Zahlen stehen für den Index der Liste der Eingaben.</li>
+        <li>Die Reihenfolge der Zeilen und der einzelnen Indizes ist beliebig (siehe Beispiele).</li>
+    </ul>
+</ul>
+</p>
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>Vorbedingung:</strong>
+    <ul>
+        <li>2 &le; len(Eingabe) &le; 50</li>
+        <li>0 &le; x (,y) &le; 999</li>
+    </ul>
+</p>
+
