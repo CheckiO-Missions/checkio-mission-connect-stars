@@ -1,0 +1,76 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    在这项任务中，您必须制作<a target="_blank" href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree (Wikipedia)</a> 。
+</p>
+<p>
+    您会得到一个顶点坐标列表。每个坐标都是 x（整数）和 y（整数）的元组。<br/>
+    您必须返回一个连接所有顶点的线段列表（或可迭代线段）。
+    线条的总长度应为最小值。每条线都是由两个整数组成的元组。 
+    这些整数代表输入列表的索引。
+</p>
+
+<p><strong>注意</strong></p>
+<ul>
+    <li>测试的输出具有唯一的行组合。</li>
+</ul>
+
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>示例</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+</pre>
+{% else %}
+<pre class="brush: python">
+connect_stars([(1, 1), (4, 4)]) == [(0, 1)]                         # or [(1, 0)]
+connect_stars([(1, 1), (4, 1), (4, 4)]) == [(0, 1), (1, 2)]         # or [(1, 2), (0, 1)] , [(1, 0), (2,1)] etc
+connect_stars([(6, 6), (6, 8), (8, 4), (3, 2)]) == [(0, 1), (0, 2), (0, 3)]   # or [(2, 0), (0, 3), (1, 0)] etc
+</pre>
+{% endif %}
+
+<p style="text-align: center;">
+    <img  title="connect stars examples" src="{{MEDIA}}example.png" alt="example" style="max-height: 250px"/>
+</p>
+</div>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>输入 </strong>
+<ul>
+    <li>顶点坐标列表。
+        <ul>
+            <li>每个坐标都是 x（整数）和 y（整数）的元组。</li>
+        </ul>
+    </li>
+</ul>
+</p>
+
+<p>
+    <strong>输出： </strong>
+<ul>
+    <li>行列表（或可迭代行）。</li>
+    <ul>
+        <li>每一行都是由两个整数组成的元组。这些整数代表输入列表的索引。</li>
+        <li>行的顺序和每个索引的顺序是任意的（见示例）。</li>
+    </ul>
+</ul>
+</p>
+
+<!-- Here you can explain how it can be used in development -->
+
+<!-- The section is optional -->
+<p>
+    <strong>前提条件</strong>
+    <ul>
+        <li>2 &le; len(input) &le; 50</li>
+        <li>0 &le; x (,y) &le; 999</li>
+    </ul>
+</p>
+
